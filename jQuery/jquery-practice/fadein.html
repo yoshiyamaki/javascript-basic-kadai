@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>フェードアニメーション</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #box {
+            width: 200px;
+            height: 100px;
+            background-color: skyblue;
+            display: none; /* 最初は非表示 */
+            text-align: center;
+            line-height: 100px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button id="fadeIn">フェードイン</button>
+    <button id="fadeOut">フェードアウト</button>
+    <button id="fadeToggle">切り替え</button>
+    <div id="box">フェードアニメーション</div>
+
+    <script>
+      $(document).ready(function(){
+          $("#fadeIn").click(function(){
+              $("#box").fadeIn(1000); // 1秒かけて表示
+          });
+
+          $("#fadeOut").click(function(){
+              $("#box").fadeOut(1000); // 1秒かけて非表示
+          });
+
+          $("#fadeToggle").click(function(){
+              $("#box").fadeToggle(1000); // 1秒かけて表示/非表示を切り替え
+          });
+      });
+    </script>
+    <script>
+          $("#fadeIn").click(function(){
+        $("#box").fadeIn(1000);
+        setTimeout(function(){
+            $("#box").fadeOut(1000);
+        }, 2000); // 2秒後にフェードアウト
+      });
+    </script>
+</body>
+</html>

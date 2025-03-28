@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クラスの追加・削除</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <button id="add">クラス追加</button>
+    <button id="remove">クラス削除</button>
+    <p id="text">このテキストのクラスを変更します</p>
+
+    <script>
+        $(document).ready(function(){
+            $("#add").click(function(){
+                $("#text").addClass("highlight");
+            });
+
+            $("#remove").click(function(){
+                $("#text").removeClass("highlight");
+            });
+        });
+    </script>
+</body>
+</html>

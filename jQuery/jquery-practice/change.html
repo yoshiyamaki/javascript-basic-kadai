@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery text()の動作確認</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <p class="example">こんにちは！</p>
+    <button id="changeText">テキスト変更</button>
+
+    <script>
+        $("#changeText").click(function(){
+             alert($(".example").text()); 
+        });
+    </script>
+</body>
+</html>
